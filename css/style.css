@@ -1,0 +1,27 @@
+/* Structural Pseudo-classes------------------ */
+
+/* This selector and rule set will target the first li of ul in html ... first li = "first child" ... "li:first-child" is a pseudo-class (note the colon) */ 
+li:first-child {
+    background: #52bab3; /* You can preview and see that only the first li is this color ... that's because of the "li:first-child" pseudo-class! */
+    color: white;
+}
+
+li:last-child { /* This "li:last-child" pseudo-class allows you to quickly and efficiently drop the border from the bottom of the list! */
+    border: none;
+}
+
+:only-child { /* */
+    color: #52bab3;
+    font-size: 1.5em;
+}
+
+/* nth-child Pseudo-classes------------------ */
+li:nth-child(2n+3) { /* Within parentheses, type "an+b" ... but change the a and b values to numbers, where b could be "3" for the third list item and "a" could be "2" for "every second list item after the third list item, aka b" ... you could also do 0n+1 -- or simplify that to n+1 -- to make every list item after the first appear a certain way ... you could also use "-n+3" to make the first 3 items in the list appear as specified, perhaps because they are featured items, and the rest of the list tiems not ... alternatively, another thing you can do instead of the "an+b" approach, which is actually one of the more powerful was to use nth-child, is you can specify ODD or EVEN to target the odd or even li. You can also type in a number, like 3, to target the third li. */
+    background: #52bab3;
+    color: white;
+}
+
+/* JUST AN EXAMPLE OF USE CASE FOR empty element: this rule as-is will display any html field that's blank or empty -- for example, "<li></li>", as opposed to "<li>Item 1</li>" -- which can help reveal errors or unnecessary items in the markup ... as written, it's not specific, hence it will turn any blank field ... but you can make it more specific by switching it to "li:empty", which will reveal any empty list item by turning it tomato, instead.
+:empty {
+    background-color: tomato;
+} */
